@@ -5,8 +5,8 @@
   "main": "./src/app.js",
   "proxy": "http://localhost:3022",
   "scripts": {
-    "start": "node app.js",
-    "test": "nodemon napp.js"
+    "start": "node ./src/app.js",
+    "test": "nodemon napp.js" 
   },
   "repository": {
     "type": "git",
