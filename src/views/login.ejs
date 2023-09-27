@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head.ejs') %>
+    <script>src="/validationsFront/validationLogin.js"</script>
+       <body>
+        <div class="logo-clandestino">
+            <h1>Bienvenido</h1>
+        </div>
+          <form action="/login" method="POST" id= "formLogin">
+            <div class="nombre-login <%= locals.errors && errors.email? 'border-msg' : '' %>">
+                <i class="fas fa-user-plus"></i>
+                <input placeholder= "Email"  type="text" name="email" id="email" value="<%= locals.oldData ? oldData.email : null %>"> 
+            </div>
+            <section class="error-msg-Email">
+            </section>
+            <div class="error-msg">
+                <% if (locals.errors && errors.email) { %>
+                    <%= errors.email.msg %>
+                   <% } %>
+            </div>
+            <div class="contraseña-login <%= locals.errors && errors.password? 'border-msg' : '' %>">
+                <i class="fas fa-eye-slash"></i>
+                <input placeholder="Cédula" type="password" name="password" id="password" value="<%= locals.oldData ? oldData.password : null %>">
+            </div>
+            <section class="error-msg-password">
+            </section>
+            <div class="error-msg">
+                <% if (locals.errors && errors.password) { %>
+                    <%= errors.password.msg %>
+                   <% } %>
+            </div>
+            <div>
+                <button type="submit" value="Ingresar">Ingresar</button>
+            </div>
+            <a id="" href="/register"><h3>Registrate</h3></a>
+          </form>
+        </div>
+    <div class="button">
+    </div>
+    </body>
+</html>

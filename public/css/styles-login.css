@@ -1,0 +1,156 @@
+body {
+    font-family: "Roboto";
+    padding: 20px;
+    border: 15px;
+    background-color: #040404;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+img {
+    width:200px;
+    height:150px;
+    margin-bottom: 0px;
+}
+
+form{
+    display: contents;
+}
+
+form input {
+    width: 200px;
+    height: 90%;
+    border: solid 1px #d8e4e3f6;
+    border-radius: 5px;
+    background-color: #d8e4e3f6;
+    align-items: center;
+    margin: 15px auto;
+    margin-left:10px;
+    order: 1;    
+}
+
+form input:focus { 
+    border: 1px solid #d8e4e3f6;
+}
+
+form ::placeholder {
+    font-family: "Roboto";
+    color: white;
+    font-size: 1rem;
+}
+
+h1 {
+    font-family: "Roboto";
+    color: white;
+    text-align: center;
+    margin-top: 0px;
+}
+
+h2 {
+    font-family: "Roboto";
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+}
+
+h3 {
+    font-family: "Roboto";
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.button {
+    text-align: center;
+}
+
+button {
+    width: 200px;
+    height: 40px;
+    font-family: "Roboto";
+    font-size: 1rem;
+    color: white;
+    border: solid 1px #d8e4e3f6;
+    background-color: #d8e4e3f6;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+    transition: all 0.5s;
+
+}
+button:hover{
+    background-color: #aa8500;
+    cursor: pointer;
+
+} 
+
+.nombre-login {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d8e4e3f6;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #d8e4e3f6;
+
+}
+.fa-user-plus{
+    color:white;
+    border: solid 1px #d8e4e3f6;
+    order:2;
+    margin-right:10px;
+}
+.contraseña-login {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d8e4e3f6;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #d8e4e3f6;
+}
+
+.entrevistador-login {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d8e4e3f6;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #d8e4e3f6;
+}
+.recuerdame{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    width: 200px;
+    height: 100%;
+}
+.fa-eye-slash{
+    color:white;
+    border: solid 1px #d8e4e3f6;
+    order:2;
+    margin-right:10px;
+}
+
+.error-msg{
+    color: #d8e4e3f6;
+    margin-bottom: 20px;
+}
+.border-msg{
+    border: solid 1px red;
+}
+
+input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+            transition: background-color 5000s ease-in-out 0s;
+            background-color: #fff !important;
+        }

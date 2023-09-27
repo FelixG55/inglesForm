@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head.ejs') %>
+    <body>
+            <h1>Registre su usuario</h1>
+
+        <form id="formRegister" action="/register" method="POST">
+            <div class="container-form <%= locals.errors && errors.name? 'border-msg' : '' %>" >
+                <label for="name"></label>
+                <input placeholder="Nombre" type="text" name="name" id="name" value="<%= locals.oldData ? oldData.name : null %>" >
+            </div>
+            <section class="error-msg-name">
+                <ul>
+    
+                </ul>
+            </section>
+            <div class="error-msg">
+                <% if (locals.errors && errors.name) { %>
+                 <%= errors.name.msg %>
+                <% } %>
+            </div>
+            <div class="container-form <%= locals.errors && errors.lastname? 'border-msg' : '' %>">
+                <label for="lastname"></label>
+                <input placeholder="Apellido" type="text" name="lastname" id="lastname" value="<%= locals.oldData ? oldData.lastname : null %>">
+            </div>
+            <section class="error-msg-lastname">
+                <ul>
+    
+                </ul>
+            </section>
+            <div class="error-msg">
+                <% if (locals.errors && errors.lastname) { %>
+                    <%= errors.lastname.msg %>
+                   <% } %>
+            </div>
+            <div class="container-form <%= locals.errors && errors.email? 'border-msg' : '' %>">
+                <label for="email"></label>
+                <input placeholder="Email" type="text" name="email" id="email" autocomplete="off" value="<%= locals.oldData ? oldData.email : null %>">
+            </div>
+            <section class="error-msg-Email">
+                <ul>
+    
+                </ul>
+            </section>
+            <div class="error-msg">
+                <% if (locals.errors && errors.email) { %>
+                    <%= errors.email.msg %>
+                   <% } %>
+            </div>
+            <div class="container-form <%= locals.errors && errors.password? 'border-msg' : '' %>">
+                <label for="password"></label>
+                <input placeholder="Cédula" type="password" name="password" id="password" value="<%= locals.oldData ? oldData.password : null %>">
+            </div>
+            <section class="error-msg-password">
+                <ul>
+    
+                </ul>
+            </section>
+            <div class="error-msg">
+                <% if (locals.errors && errors.password) { %>
+                    <%= errors.password.msg %>
+                   <% } %>
+            </div>
+
+            <div class="container-form <%= locals.errors && errors.interviewer? 'border-msg' : '' %>">
+                <label for="interviewer"></label>
+                <input placeholder="Entrevistador" type="text" name="interviewer" id="interviewer" value="<%= locals.oldData ? oldData.interviewer : null %>">
+            </div>
+            <section class="error-msg-interviewer">
+                <ul>
+    
+                </ul>
+            </section>
+            <div class="error-msg">
+                <% if (locals.errors && errors.interviewer) { %>
+                    <%= errors.interviewer.msg %>
+                   <% } %>
+            </div>
+
+            <div class="enviar">
+                <button type="submit">Enviar</button>
+            </div>  
+        </form>
+        <div class="enviar">
+            <a href="/">
+            <button type="submit" value="Volver">Volver</button>
+            </a>
+        </div>
+    </body>
+    <script src="/validationsFront/validationRegister.js"></script>     
+</html>

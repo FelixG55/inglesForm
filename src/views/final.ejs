@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  
+  
+   <form id="formFinal" action="/" method="get">
+    <input type="hidden" id="resultado" name="resultado" value='<%= totalCorrectas %>' >
+    <input type="hidden" id="name" name="name" value= <%= profile.name %> >
+    <input type="hidden" id="lastname" name="lastname" value= <%= profile.lastname %> > 
+    <p>Felicidades ha terminado su examen, oprima el boton para ver sus resultados</p>
+    <input type="submit" id="button" value="Send Email" >
+    </form>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+    emailjs.init('XL5tvXPhKLxpVrHgB')
+  </script>
+<script src="/js/emailSent.js"></script>
+  </body>
+
+
+
+</html>

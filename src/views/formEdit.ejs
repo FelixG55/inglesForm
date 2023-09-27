@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head.ejs') %>
+<body>
+  <div class="container-reservation">
+    <div class="logo">
+      <a href="/"><img src="/images/buho.png" alt="logo"></a>
+    </div>
+    <form action="/editForm?_method=PUT" method="POST" id= "formLogin">
+      <!-- Reading -->
+      <p>Section I: Reading
+        In this section of the Placement Test, you will read some short passages and answer questions about them. Choose the word or words that best complete the sentence. For each item, choose your answer.
+        You will have 20 minutes to complete this section.</p>
+        <br>
+        
+        <% let passB = 0 %>
+        <% for (let i = 0; i < preguntas.length;i++) { %>
+          <% if (preguntas[i].reading == 1) { %>
+            <% let pass = preguntas[i].passage %>
+              <% for( let k = 1; k <= maxPassage.get().max_passage; k++ ) { %>
+                <% if (k == pass && pass != passB) { %>
+                  <% passB = pass %>
+                  <a href="/" class="passage"><img src="/images/images/passage<%=pass%>.png" alt="passage<%=pass%>"></a><br>
+                  <% } %>
+                  <% } %>             
+                <input type="text" id="pregunta<%= preguntas[i].id%>" name="pregunta<%= preguntas[i].id%>" placeholder="<%=preguntas[i].pregunta%>" size="<%= preguntas[i].pregunta.length %>" value="<%=preguntas[i].pregunta%>">
+                <br>
+                <br>     
+              <% for( let j = 0; j < respuestas.length; j++ ) { %>
+                <% if (respuestas[j].idPregunta == preguntas[i].id ) { %>
+                  <div >
+                    <% if (respuestas[j].respuestaCorrecta == 1) { %>
+                      <input type="radio" id="respuesta<%= respuestas[j].id %>" name="respuesta<%= respuestas[j].id %>" value="<%=respuestas[j].respuesta%>" checked>   
+                    <% } else { %>
+                      <input type="radio" id="respuesta<%= respuestas[j].id %>" name="respuesta<%= respuestas[j].id %>" value="<%=respuestas[j].respuesta%>">
+                     <% } %>
+                    <input type="text" id="respuesta<%= respuestas[j].id %>" name="respuesta<%= respuestas[j].id %>" placeholder="<%=respuestas[j].respuesta%>" value="<%=respuestas[j].respuesta%>">   
+                  </div>
+                <% } %>
+              <% } %>
+              <br>
+          <% } %>
+      <% } %>
+      <!-- Language -->
+      <p>Section II: Language Use
+        In this section, you will answer questions about the use of English. Choose the word or words that best complete the sentence. 
+        You will have 15 minutes to complete this section.</p>
+        <br>
+      <% for (let i = 0; i < preguntas.length;i++) { %>
+        <% if (preguntas[i].language == 1) { %>
+          <input type="text" id="pregunta<%= preguntas[i].id%>" name="pregunta<%= preguntas[i].id%>" placeholder="<%=preguntas[i].pregunta%>" size="<%= preguntas[i].pregunta.length %>" value="<%=preguntas[i].pregunta%>"> 
+          <br>
+          <br>   
+          <% for( let j = 0; j < respuestas.length; j++ ) { %>
+            <% if (respuestas[j].idPregunta == preguntas[i].id ) { %>
+              <div >
+                <% if (respuestas[j].respuestaCorrecta == 1) { %>
+                  <input type="radio" id="respuesta<%= respuestas[j].id %>" name="respuesta<%= respuestas[j].id %>" value="<%=respuestas[j].respuesta%>" checked>   
+                <% } else { %>
+                  <input type="radio" id="respuesta<%= respuestas[j].id %>" name="respuesta<%= respuestas[j].id %>" value="<%=respuestas[j].respuesta%>">
+                 <% } %>   
+                <input type="text" id="respuesta<%= respuestas[j].id %>" name="respuesta<%= respuestas[j].id %>" placeholder="<%=respuestas[j].respuesta%>" value="<%=respuestas[j].respuesta%>">   
+              </div>
+            <% } %>
+          <% } %>
+          <br> 
+        <% } %>
+        <% } %>
+
+        <!-- Listening -->
+
+      <p>In this section of the test, you will hear conversations and answer some questions about them. For each conversation, 
+        ﬁrst read the situation and the question or questions. Then listen to the conversation. Answer the questions after you hear the conversation. 
+        You can only listen to the conversation once, if you listen more than once you will not finish the exam on time and points will be deducted from your score. You will have 20 minutes to complete this section.</p>
+        <br>
+
+      <% let passBL = 0 %>
+        <% for (let i = 0; i < preguntas.length;i++) { %>
+          <% if (preguntas[i].listening == 1) { %>
+            <% let pass = preguntas[i].situation %>
+              <% for( let k = 1; k <= maxSituation.get().max_situation; k++ ) { %>
+                <% if (k == pass && pass != passBL) { %>
+                  <% passBL = pass %>
+                  <a href="/" class="situation"><img src="/images/images/Situation<%=pass%>.png" alt="Situation<%=pass%>"></a><br>
+                  <iframe src="<%= preguntas[i].conversation %>"> ></iframe><br>
+                  <% } %>
+                  <% } %>             
+                <input type="text" id="pregunta<%= preguntas[i].id%>" name="pregunta<%= preguntas[i].id%>" placeholder="<%=preguntas[i].pregunta%>" size="<%= preguntas[i].pregunta.length %>" value="<%=preguntas[i].pregunta%>">
+                <br>
+                <br>     
+              <% for( let j = 0; j < respuestas.length; j++ ) { %>
+                <% if (respuestas[j].idPregunta == preguntas[i].id ) { %>
+                  <div >
+                    <% if (respuestas[j].respuestaCorrecta == 1) { %>
+                      <input type="radio" id="respuesta<%= respuestas[j].id %>" name="respuesta<%= respuestas[j].id %>" value="<%=respuestas[j].respuesta%>" checked>   
+                    <% } else { %>
+                      <input type="radio" id="respuesta<%= respuestas[j].id %>" name="respuesta<%= respuestas[j].id %>" value="<%=respuestas[j].respuesta%>">
+                     <% } %> 
+                    <input type="text" id="respuesta<%= respuestas[j].id %>" name="respuesta<%= respuestas[j].id %>" placeholder="<%=respuestas[j].respuesta%>" value="<%=respuestas[j].respuesta%>">   
+                  </div>
+                <% } %>
+              <% } %>
+              <br>
+          <% } %>
+      <% } %>
+
+      <button type="submit" >Enviar> </button>
+      </form>
+  </div>    
+</body>
+
+</html>

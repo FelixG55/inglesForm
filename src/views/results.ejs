@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head.ejs') %>
+<body>
+  
+    <table>
+
+        <tr>
+            <th>Cédula</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Correo</th>
+            <th>Entrevistador</th>
+            <th>Resultado</th>
+        </tr>
+        <% for( let i = 0; i < resultados.length; i++ ) { %>
+            <tr>
+                <th><%= resultados[i].cedula %></th>
+                <th><%= resultados[i].nombre %></th>
+                <th><%= resultados[i].apellido %></th>
+                <th><%= resultados[i].email %></th>
+                <th><%= resultados[i].interviewer %></th>
+                <th><%= resultados[i].resultado %></th>
+            </tr>
+        <% } %>
+
+    </table>
+   
+    
+</body>
+</html>

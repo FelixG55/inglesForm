@@ -1,0 +1,140 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+    background-color: #040404 ;
+    box-sizing: border-box;
+}
+.imagen{
+    width: 50%;
+    max-width: 300px;
+
+}
+
+h1{
+    color: white;
+    text-align: center;
+    padding: 15px
+}
+.container-form {
+    font-family: "Roboto";
+    font-size: 1rem;
+    text-align: center;
+    justify-content: center;
+    background-color: #d8e4e3f6;
+    border-radius: 5px;
+    display: flex;
+    max-width: 20%;
+    padding: 8px;
+    margin: 5px auto;
+
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  /* Define aquí los estilos personalizados, como el fondo y el color de texto */
+  background-color: #FFC800;
+}
+form{
+    text-align: center;
+}
+
+form p {
+    font-family: "Roboto";
+    font-size: 1rem;
+    color: #2f00ff;
+    text-align: center;
+    padding: 5px;
+   
+}
+
+form ::placeholder{
+    font-family: "Roboto";
+    font-size: 1rem;
+    color: rgb(19, 1, 1);
+    background-color: #d8e4e3f6;
+    border: solid 1px #d8e4e3f6;
+}
+
+input{
+    border: solid 1px #d8e4e3f6;
+    width: 100%;
+    text-align: center;
+    outline: 0 none;
+    background-color: #d8e4e3f6;
+    color: #040404;
+}
+select {
+    background-color: #d8e4e3f6;
+}
+label{
+    background-color: #d8e4e3f6;
+    color: white;
+}
+option{
+    background-color: #d8e4e3f6;
+}
+.enviar{
+    text-align: center;
+}
+.enviar button{
+    width: 200px;
+    height: 30px;
+    font-family: "Roboto";
+    font-size: 1rem;
+    color: white;
+    border: solid 1px #d8e4e3f6;
+    background-color: #d8e4e3f6;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+}
+button:hover{
+    background-color: #aa8500;
+    cursor: pointer;
+
+} 
+.error-msg{
+    color: #FFC800;
+    margin-bottom: 20px;
+}
+.error-msg-name{
+    color: #FFC800;
+    margin-bottom: 20px;
+}
+.error-msg-lastname{
+    color: #FFC800;
+    margin-bottom: 20px;
+}
+.error-msg-Email{
+    color: #FFC800;
+    margin-bottom: 20px;
+}
+.error-msg-password{
+    color: #FFC800;
+    margin-bottom: 20px;
+}
+.error-msg-image{
+    color: #FFC800;
+    margin-bottom: 20px;
+}
+.error-msg-admin{
+    color: #FFC800;
+    margin-bottom: 20px;
+}
+.error-msg-interviewer{
+    color: #FFC800;
+    margin-bottom: 20px;
+}
+.border-msg{
+    border: solid 1px white;
+}
+input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+            transition: background-color 5000s ease-in-out 0s;
+            background-color: #fff !important;
+        }
