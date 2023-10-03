@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <%- include('partials/head.ejs') %>
+  <p id="demo" class="demo"></p>
 <body>
   <div class="container-reservation">
-    
-    <form action="/postForm" method="POST" id= "formLogin">
+    <form action="/postForm" method="POST" id= "formLogin" >
       <!-- Reading -->
       <input type="hidden" id="name" name="name" value= <%= profile.name %> >
       <input type="hidden" id="lastname" name="lastname" value= <%= profile.lastname %> >
@@ -92,10 +92,11 @@
           <% } %>
       <% } %>
 
-      <button type="submit" id="button">Enviar></button>
+      <button type="submit" id="button" class="sendButton">Enviar></button>
       </form>
       <script src="/js/formVerify.js"></script>
-  </div>    
-</body>
-
-</html>
+      <script src="/js/counter.js"></script>
+    </div>    
+  </body>
+  <script src="/js/sweetalert2.all.min.js"></script>
+  </html>
