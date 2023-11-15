@@ -1,0 +1,21 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #040404;
+    color: white;
+  }
+
+.header-admin{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+a{
+    font-family: 'Roboto', sans-serif;
+    color:#ffc800;
+    text-align: center;
+    font-size: large;
+    font-weight: bolder;
+  }

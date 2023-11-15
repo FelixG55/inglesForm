@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Pregunta';
+    let alias = 'Respuesta';
     let cols = {
         id: {
             type: dataTypes.BIGINT(11),
@@ -7,40 +7,24 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true,        
             allowNull: false
         },
-        pregunta: {
-            type: dataTypes.STRING(200),
+        respuesta: {
+            type: dataTypes.STRING(45),
             allowNull: false
         },
-        reading: {
+        idPregunta: {
             type: dataTypes.BIGINT(11),
             allowNull: false
         },
-        language: {
+        respuestaCorrecta: {
             type: dataTypes.BIGINT(11),
-            allowNull: false
-        },
-        listening: {
-            type: dataTypes.BIGINT(11),
-            allowNull: false
-        },
-        passage: {
-            type: dataTypes.BIGINT(11),
-            allowNull: false
-        },
-        situation: {
-            type: dataTypes.BIGINT(11),
-            allowNull: false
-        },
-        conversation: {
-            type: dataTypes.BIGINT(200),
             allowNull: false
         }
     };
     let config = {
-        tableName: "preguntas",
+        tableName: "Respuestas",
         timestamps: false
     }
-    const Pregunta = sequelize.define(alias, cols, config); 
+    const Respuesta = sequelize.define(alias, cols, config); 
 
     //Aquí debes realizar lo necesario para crear las relaciones con el modelo (Movie)
 
@@ -52,5 +36,5 @@ module.exports = (sequelize, dataTypes) => {
     //     })
     //  }   
  
-    return Pregunta
+    return Respuesta
 };

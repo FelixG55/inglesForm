@@ -4,6 +4,7 @@ const {index, postForm, form, editForm, showEditForm, adminView, showResultsView
 const uploadProductFile = require('../middleware/multerForm.js');
 const routerMain = express.Router();
 const adminMiddelware = require('../middleware/adminMiddelware')
+const validateForm = require('../middleware/validateForm')
 
 routerMain.get ('/form', index);
 routerMain.post('/postForm',postForm)

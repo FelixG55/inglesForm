@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+  <%- include('partials/head.ejs') %>
 <body>
   
   
    <form id="formFinal" action="/" method="get">
     <input type="hidden" id="resultado" name="resultado" value='<%= totalCorrectas %>' >
     <input type="hidden" id="name" name="name" value= <%= profile.name %> >
-    <input type="hidden" id="lastname" name="lastname" value= <%= profile.lastname %> > 
+    <input type="hidden" id="lastname" name="lastname" value= <%= profile.lastname %> >
+    <input type="hidden" id="totalrespuestas" name="totalrespuestas" value= '<%= totalrespuestas %>' > 
     <p>Felicidades ha terminado su examen, oprima el boton para ver sus resultados</p>
-    <input type="submit" id="button" value="Send Email" >
+    <div class="button">
+      <input type="submit" id="button" value="Ver resultados" class="sendButton" >
+    </div>
     </form>
     <script type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -17,7 +21,5 @@
   </script>
 <script src="/js/emailSent.js"></script>
   </body>
-
-
-
+  <script src="/js/sweetalert2.all.min.js"></script>
 </html>

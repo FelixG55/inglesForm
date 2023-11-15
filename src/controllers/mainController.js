@@ -53,13 +53,19 @@ const postForm = (req, res) => {
             interviewer: profile.interviewer,
             cedula: profile.password
         })
-        res.render(path.join(__dirname, '../views/final'),{totalCorrectas, profile})
+        db.Respuesta.findAll({
+        }).then(respuestas =>{
+           let totalrespuestas = respuestas.length
+           res.render(path.join(__dirname, '../views/final'),{totalCorrectas, profile,totalrespuestas,style:'styles-final'})
+        })
     })
 };
 
 const adminView = (req, res) => {
 
-    res.render(path.join(__dirname, '../views/admin'),({style:'style-admin'}))
+    let profile = req.session.userLogged
+
+    res.render(path.join(__dirname, '../views/admin'),({profile,style:'styles-admin'}))
 }
 
 const showEditForm = (req,res) => {

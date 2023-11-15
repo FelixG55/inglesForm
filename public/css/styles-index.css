@@ -70,12 +70,17 @@ button:hover {
 
 img {
 
-  width: 50%;
-  height: 50x;
+  width: 80%;
+  height: 80x;
 }
 
 .demo {
   position: fixed;
   font-size: 20px;
   margin-top: 0px;
+}
+
+.error-pregunta{
+  border: 2px solid #ffc800;
+  color: #ffc800;
 }

@@ -20,7 +20,7 @@
               <% for( let k = 1; k <= maxPassage.get().max_passage; k++ ) { %>
                 <% if (k == pass && pass != passB) { %>
                   <% passB = pass %>
-                  <a href="/" class="passage"><img src="/images/images/passage<%=pass%>.png" alt="passage<%=pass%>"></a><br>
+                  <img src="/images/images/passage<%=pass%>.png" alt="passage<%=pass%>"><br>
                   <% } %>
                   <% } %>             
                 <input type="text" id="pregunta<%= preguntas[i].id%>" name="pregunta<%= preguntas[i].id%>" placeholder="<%=preguntas[i].pregunta%>" size="<%= preguntas[i].pregunta.length %>" value="<%=preguntas[i].pregunta%>">
@@ -81,7 +81,7 @@
               <% for( let k = 1; k <= maxSituation.get().max_situation; k++ ) { %>
                 <% if (k == pass && pass != passBL) { %>
                   <% passBL = pass %>
-                  <a href="/" class="situation"><img src="/images/images/Situation<%=pass%>.png" alt="Situation<%=pass%>"></a><br>
+                  <img src="/images/images/Situation<%=pass%>.png" alt="Situation<%=pass%>"><br>
                   <iframe src="<%= preguntas[i].conversation %>"> ></iframe><br>
                   <% } %>
                   <% } %>             
