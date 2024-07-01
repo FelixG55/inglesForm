@@ -1,6 +1,6 @@
 
 // Set the date we're counting down to
-var countDownDate = new Date().getTime() + 10000;
+var countDownDate = new Date().getTime() + 6000000;
 // 2401000
 var tenAlertTime = 0; 
 var finAlertTime = 0;
