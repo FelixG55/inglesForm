@@ -1,6 +1,6 @@
 
 
-# InglesForma
+# InglesForm
 
 Proyecto de un sitio para realizar examen de ingles. 
 
@@ -11,6 +11,7 @@ Clonar el proyecto
 
 ```bash
   git clone https://github.com/FelixG55/inglesForm.git
+```
 
 Ir al directorio del proyecto
 
